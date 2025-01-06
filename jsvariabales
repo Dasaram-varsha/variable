@@ -1,0 +1,17 @@
+Variables
+case sensitive, start with letters, _, $
+cant start with numbers and keywords
+var (global scope)
+let (local)
+const (local)
+Reassigning variables
+Accepted by var and let
+Not accepted by const
+Redeclaring variables
+Accepted by var
+Not accepted by let and const
+
+
+
+
+
