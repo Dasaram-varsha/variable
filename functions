@@ -1,0 +1,70 @@
+Functions
+It is a reusable block of code.
+It can be called anywhere in a program.
+Reusable code: using an existing code without writing it every time we need.
+You can use the same code with different arguments to get the results.
+Key word used is JS is function. (in java def)
+Key word=function
+()
+Parameters: values(variables) which are declared inside the () while defining the functions.
+Arguments: values which are passed through the parameters.
+Function return: return statement can be used to return the value to function call.
+Anonymous function: a function without name, after we create a function without name and we assign it to a variable.
+Example:
+Sum=function(n1,n2){
+Let r =n1+n2
+Return r
+}
+Console.log(sum(2,3))
+
+Code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function greet(){
+            console.log("hello world")
+        }
+        greet()
+        console.log("hello cse")
+        greet()
+    </script> -->
+
+    <!-- <script>
+        function g(name){
+            document.write("hello" +name)
+        }
+        let name=prompt("enter your name")
+        g(name)
+    </script> -->
+
+    <!-- <script>
+        function add(x,y){
+            document.write(x+y)
+        }
+        let x=parseFloat(prompt("enter the first number"))
+        let y=parseFloat(prompt("enter the second number"))
+        add(x,y)
+    </script> -->
+
+    <script>
+        sum=function(n1,n2){
+            let r=n1+n2
+            return r
+        }
+        document.write(sum(1,20))
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
