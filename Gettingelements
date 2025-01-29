@@ -1,0 +1,80 @@
+Getting Elements:
+1.	getElementById(): returns the element having the given id value. 
+2.	getElementByClassName(): returns all elements having same class name. returns a html collection object
+3.	getElementByTagName(): this method takes a tag name as string and returns an html object
+4.	querySelector: the document query selector method select an html element by tag name, by id, class name. it selects the first matching element
+
+Manipulating Elements:
+To create html elements:
+1.	createElement(): creating a new element using js using method
+document.createElement()
+
+Code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 id="a">hello</h1>
+    <h1 id="b">hi</h1>
+    <h1 id="c">bye</h1>
+    <script>
+        let x=document.getElementById('a');
+        console.log(x)
+    </script> -->
+
+    <!-- <h1 id="a">i am sam</h1>
+    <h1 id="b">i am john</h1>
+    <h1 id="c">i am ravi</h1>
+    <h2 class="d">i am ria</h2>
+    <script>
+        let x=document.getElementsByClassName('d');
+        console.log(x)
+    </script> -->
+
+    <!-- <h1 id="a">i am sam</h1>
+    <h1 id="b">i am john</h1>
+    <h1 id="c">i am ravi</h1>
+    <h2 class="d">i am ria</h2>
+    <script>
+        let x=document.getElementsByTagName(h1)
+        console.log(a)
+
+        for(let i=0;i<x.length;i++){
+            document.write(x[i].innerHTML);
+        }
+    </script> -->
+
+    <!-- <h1 id="aa" class="a">i am sam</h1>
+    <h2 id="b" class="b">i am john</h1>
+    <h1 id="c" class="a">i am ravi</h1>
+
+    <h2 class="a">i am ria</h2>
+    <script>
+        let x=document.querySelector('h1')
+        console.log(x)
+    </script> -->
+
+    <!-- <script>
+        let t=document.createElement('h2')
+        t.className="ab"
+        t.textContent="hello world"
+        console.log(t)
+        document.body.appendChild(t);
+    </script> -->
+
+    <script>
+        const t=['abc','pqr','xyz']
+        for(let i=0;i<t.length;i++){
+            let t1=document.createElement('h1');
+            t1.className="a"
+            t1.textContent=t[i]
+            console.log(t1)
+            document.body.appendChild(t1);
+        }
+    </script>
+</body>
+</html>
