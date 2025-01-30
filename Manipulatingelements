@@ -1,0 +1,60 @@
+Manipulating Elements:
+To create html elements:
+1.	createElement(): creating a new element using js using method
+document.createElement()
+2.	removeChild(): removes the child element
+3.	append(): to append new element to the parent node
+
+Code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        const titles=["sam","john","ken"]
+        for(let i=0;i<titles.length;i++){
+            let title=document.createElement('h1');
+            title.className="a"
+            title.textContent=titles[i]
+            console.log(title)
+        }
+    </script> -->
+
+        <!-- <h1>Remove child elements</h1>
+        <h2>I am varsha</h2>
+        <ul>
+            <li>abc</li>
+            <li>pqr</li>
+            <li>xyz</li>
+        </ul>
+        <script>
+            const ul=document.querySelector('ul')
+            const lists=document.querySelectorAll('li')
+            for(const list of lists){
+                console.log(`removing: ${list.textContent}`)
+                ul.removeChild(list)
+            }
+        </script> -->
+
+        <div id="a">
+            <h1>sam</h1>
+            <h1>john</h1>
+        </div>
+        <div id="b">
+            <h1>ria</h1>
+            <h1>ken</h1>
+        </div>
+        <script>
+            let n=document.createElement("h2")
+            n.textContent="hello world"
+            let p=document.getElementById("b")
+            p.appendChild(n)
+            console.log(p.innerHTML)
+        </script>
+
+</body>
+</html>
