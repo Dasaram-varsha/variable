@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let age;
+        let citizen;
+        let citizenship;
+        age = prompt("Enter your age:");
+        citizen = prompt("Are you a citizen? (yes or no)");
+        citizenship = prompt("Citizenship status (pass or fail):");
+        if (parseInt(age) >= 18 && citizen === "yes" && citizenship === "pass") {
+            document.write("You are eligible to vote.");
+        } else {
+            document.write("You are not eligible to vote.");
+        }
+    </script> -->
+
+    <script>
+        let expenses;
+        let premium;
+        let discount=0;
+        expenses=prompt("enter the amount")
+        premium=prompt("is premium member? (yes or no)")
+        if(parseInt(expenses)>100){
+            discount=expenses*(0.20);
+        }
+        else if(parseInt(expenses)>50|| parseInt(expenses)<=100){
+            discount=expenses*(0.10);
+        }
+        else if(premium=="yes"){
+            discount=expenses*(0.05);
+        }
+        let finalAmount =(expenses - discount);
+        document.write("Final amount after discount: " + finalAmount);
+    </script>
+</body>
+</html>
