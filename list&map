@@ -1,0 +1,66 @@
+#lists and keys:
+in react it is a collection of items you want to display
+Keys : helps us to keep the track of items in a list 
+== react knows which items you have changed
+
+Map() : allows us to elements in array 
+==function will be applied to all elements
+
+const n = [1,2,3,4,5]
+const d = n.Map(num=>num*2)
+console.log(d)
+
+code:
+import React from 'react';
+function Greeting({isLoggedIn}){
+    if(isLoggedIn){
+        return <h1>welcome back</h1>
+    }else{
+        return <h1>Please login</h1>
+    }
+}
+export default Greeting;
+
+import React from 'react';
+import Greeting from './greeting';
+// import './App.css'
+// const Welcome=()=><h1 className='message'>hello world</h1>
+// function App() {
+//   return(
+//     <div className='App'>
+//       <Welcome/>
+//     </div>
+//   )
+// }
+
+
+// const App=()=>{
+//   return(
+//     <div style={{textAlign:'center', color: 'green'}}>
+//       <Welcome name="varsha" greeting="hello" />
+//       <Welcome name="sam" greeting="hi"/>
+//     </div>
+//   )
+// }
+
+// function App(){
+//   const isLoggedIn=false;
+//   return(
+//     <div className='App'><Greeting isLoggedIn={isLoggedIn}/></div>
+//   )
+// }
+const FruitList=()=>{
+  const fruits = ['apple','cherry','orange'];
+
+return(
+  <div>
+      <h1>FruitList</h1>
+      <ul>
+          {fruits.map((fruit,index)=>(
+            <li key={index}>{fruit}</li>
+          ))}
+      </ul>
+  </div>
+)
+}
+export default FruitList;
