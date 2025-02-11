@@ -1,0 +1,23 @@
+App.js
+import React, { useState } from "react";
+import Greeting from "./greeting";
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const name = 'Varsha';
+
+  return (
+    <Greeting name={name} isLoggedIn={isLoggedIn} />
+  );
+};
+export default App;
+
+greeting.js
+import React from 'react';
+const Greeting = ({ name, isLoggedIn }) => {
+  if (isLoggedIn) {
+    return <h1>Welcome back, {name}!</h1>;
+  } else {
+    return <h1>Please login</h1>;
+  }
+};
+export default Greeting;
