@@ -1,0 +1,70 @@
+React Reducer()
+A reducer is a function that helps to update (like score , a list)  based on action we take
+1)current state: the value of a state 
+2)action:
+Example:
+Action: add or remove an item
+State: initial value (3 items) 
+
+Callback in react
+Callback is a function that is passed as an argument to another function
+Callbacks are often to communicate with different components
+Ex: a parent component passing as callback to a child component
+
+App.js:
+import React, {useReducer,type} from 'react';
+import './index.css';
+function appleReducer(state=3,action){
+  switch(action.type){
+    case 'ADD_APPLE':
+      return state+1;
+
+    case 'EAT_APPLE':
+      return state-1;
+
+    default:
+      return state;
+  }
+}
+
+function App(){
+  const[state,dispatch]=useReducer(appleReducer,3);
+  return(
+    <div>
+      <h1 style={{color:'rgb(57, 10, 138)'}}>Apple Counter</h1>
+      <p style={{color:'black'}}>Number of apples:{state}</p>
+      <button onClick={()=>dispatch({type:'ADD_APPLE'})}>ADD APPLE</button>
+      <button onClick={()=>dispatch({type:'EAT_APPLE'})}>EAT APPLE</button>
+    </div>
+  )
+}
+export default App;
+
+App.js:
+import React,{useState} from "react";
+import Child from './Child';
+const Parent=()=>{
+  const[message,setMessage]=useState('hello world')
+
+const changeMessage=()=>{
+  setMessage("you clicked the button")
+}
+return(
+  <div>
+    <h1>
+      {message}
+    </h1>
+    <Child changeMessage={changeMessage}/>
+  </div>
+)
+}
+export default Parent;
+
+Child.js:
+import React from "react";
+const Child=({changeMessage})=>{
+    return(
+        <button onClick={changeMessage}>Click</button>
+    )
+} 
+export default Child;
