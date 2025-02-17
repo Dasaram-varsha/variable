@@ -1,0 +1,74 @@
+Event handling in react
+Event handling in react is how you make your app do some thing when the user interacts with it, like clicking a button, submitting a form
+1.clicking a button (onClick)
+2.pressing a key(keyDown)
+3.moving the mouse(onMouseMove)
+4.typing a textbox(onChange)
+
+How to use events in react
+-Use camelCase for events names
+-Pass a function to the event(not to a function call), this function will run when the event happens
+1.click event (onClick)
+2.change event (onChange): this occur when you type in a text box,
+-target is a property of the event object and is predefined by java script for DOM events
+-event.target always refers the element that triggered the event
+-event.target.value used to access the value of input elements buttons, form elements
+3.mouse events (onMouseEnter, onMouseLeave): this will happen when we move the mouse over or away from the element
+4.key events (onKeyDown): key is pressed on the keyboard
+Syntax: onKeyDown={keyDownFunction}
+keyDownFunction: this is a function that runs whenever any key is pressed on the keyboard
+return type: it returns a keyboard event object that provides the info about key that was pressed
+
+// import React from "react";
+// function App(){
+//   const handleClick=()=>{
+//     alert("Button clicked")
+//   };
+//   return(
+//     <button onClick={handleClick}>Click here</button>
+//   )
+// }
+// export default App;
+
+
+// import React, { useState } from "react";
+// function App(){
+//   const[text,setText]=useState("")
+//   const handleChange=(event)=>{
+//     setText(event.target.value)
+//   }
+//   return(
+//     <div>
+//       <input type="text" value={text} onChange={handleChange}/>
+//       <p>Your text:{text}</p>
+//     </div>
+//   )
+// }
+// export default App;
+
+
+import React,{useState} from "react";
+function App(){
+  const[isHovered,setIsHovered]=useState(false);
+  const handleMouseEnter=()=>{
+    setIsHovered(true);
+  }
+  const handleMouseLeave=()=>{
+    setIsHovered(false);
+  }
+  return(
+    <div>
+      <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
+        style={{
+          backgroundColor: isHovered ? "blue" : "grey",
+          color: isHovered? "black": "green"
+        }}
+      >Hover me</button>
+    </div>
+  )
+}
+export default App;
+
+
+
+
